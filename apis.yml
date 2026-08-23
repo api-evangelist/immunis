@@ -1,17 +1,33 @@
 aid: immunis
 name: Immunis
-description: 'Immunis is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+description: >-
+  Immunis, Inc. is a private, clinical-stage biotechnology company headquartered in Irvine,
+  California, developing immunomodulatory secretome biologics — the mixture of proteins and factors
+  secreted by stem cells, rather than the cells themselves — as a treatment for age- and
+  disease-related immune decline. Its lead candidate, IMM01-STEM, is under study in the STEM-MYO
+  Phase 1/2a trial for muscle atrophy and sarcopenia, alongside a STEM-META Phase 2 program and a
+  STEM-K9 veterinary program. Immunis is a therapeutics developer, not a software company: it
+  publishes no developer portal, API, SDK, webhook surface, or machine-readable API contract of any
+  kind. Its entire public surface is a WordPress marketing and clinical-trial-recruitment site whose
+  only machine-readable endpoint is the default WordPress REST API at /wp-json/, which serves the
+  CMS of that site and is not an Immunis API product.
+image: https://immunisbiomedical.com/wp-content/uploads/2026/06/ImmunisLogo.png
 url: https://raw.githubusercontent.com/api-evangelist/immunis/refs/heads/main/apis.yml
 x-type: company
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
 specificationVersion: '0.20'
 created: '2026-08-23'
 modified: '2026-08-23'
 tags:
 - Company
+- Biotechnology
+- Life Sciences
+- Therapeutics
+- Clinical Trials
+- Regenerative Medicine
+- Healthcare
+- Longevity
+- Sarcopenia
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -19,5 +35,41 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/immunis-domain-security.yml
+- type: LLMsTxt
+  url: llms/immunis-llms.txt
 - type: Website
-  url: https://www.nasdaqprivatemarket.com/
+  url: https://immunisbiomedical.com/
+- type: PressReleases
+  url: https://immunisbiomedical.com/press-releases/
+- type: Contact
+  url: https://immunisbiomedical.com/contact/
+- type: LinkedIn
+  url: https://www.linkedin.com/company/immunisbiomedical/
+x-enrichment:
+  date: '2026-08-23'
+  status: minimal
+  artifacts_added: 3
+  pass: local-v1
+x-coverage:
+  state: none
+  reason: not-a-software-company
+  detail: >-
+    Immunis, Inc. is a clinical-stage biotech developing secretome therapeutics; its full page
+    inventory (46 pages, read from the site's own sitemap) contains no developer, API or
+    documentation page, and every /openapi.json, /api-docs, /graphql, /llms.txt and /.well-known/*
+    probe on immunisbiomedical.com returned the WordPress 404 page — the only machine-readable
+    endpoint on the host is the site's default WordPress CMS REST API at /wp-json/.
+  evidence:
+  - url: https://immunisbiomedical.com/openapi.json
+    status: 404
+  - url: https://immunisbiomedical.com/.well-known/api-catalog
+    status: 404
+  - url: https://immunisbiomedical.com/llms.txt
+    status: 404
+  - url: https://immunisbiomedical.com/developers
+    status: 404
+  - url: https://immunisbiomedical.com/wp-json/
+    status: 200
+  checked: '2026-08-23'

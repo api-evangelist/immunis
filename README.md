@@ -64,5 +64,10 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Immunis is a company surfaced via the API Evangelist harvest backlog (source: secondary-market) and added to the network as a stub for full-pipeline profiling.
-- https://www.nasdaqprivatemarket.com/
+Immunis, Inc. is a private, clinical-stage biotechnology company headquartered in Irvine, California, developing immunomodulatory secretome biologics — the mixture of proteins and factors secreted by stem cells, rather than the cells themselves — as a treatment for age- and disease-related immune decline. Its lead candidate, IMM01-STEM, is under study in the STEM-MYO Phase 1/2a trial for muscle atrophy and sarcopenia, alongside a STEM-META Phase 2 program and a STEM-K9 veterinary program.
+
+Immunis is a therapeutics developer, not a software company. It publishes no developer portal, API, SDK, webhook surface, or machine-readable API contract of any kind. The only machine-readable endpoint on its host is the default WordPress REST API at `/wp-json/`, which serves the content-management system of the marketing site and is not an Immunis API product. This profile is therefore intentionally thin, and the reason is recorded in `apis.yml` under `x-coverage`.
+
+- https://immunisbiomedical.com/
+- https://immunisbiomedical.com/press-releases/
+- https://www.linkedin.com/company/immunisbiomedical/
