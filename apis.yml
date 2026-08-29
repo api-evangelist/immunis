@@ -11,6 +11,17 @@ description: >-
   kind. Its entire public surface is a WordPress marketing and clinical-trial-recruitment site whose
   only machine-readable endpoint is the default WordPress REST API at /wp-json/, which serves the
   CMS of that site and is not an Immunis API product.
+deliveryModel:
+  model: unknown
+  open_source: false
+  commercial: false
+  callable_host: false
+  label: Delivery model not determined — needs a product licence on record
+  confidence: low
+  source:
+  - none
+  generated: '2026-08-28'
+  method: derived
 image: https://immunisbiomedical.com/wp-content/uploads/2026/06/ImmunisLogo.png
 url: https://raw.githubusercontent.com/api-evangelist/immunis/refs/heads/main/apis.yml
 x-type: company
